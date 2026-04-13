@@ -1,3 +1,4 @@
+/* General Page Styling */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(to right, #1e3c72, #2a5298);
@@ -8,9 +9,11 @@ body {
 
 /* Navigation Bar */
 nav {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.75);
     padding: 15px;
     text-align: center;
+    position: sticky;
+    top: 0;
 }
 
 nav a {
@@ -31,7 +34,19 @@ h1 {
     text-align: center;
     color: white;
     margin-top: 30px;
-    font-size: 40px;
+    font-size: 42px;
+}
+
+/* Profile Section */
+.profile {
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
+
+.profile-icon {
+    font-size: 80px;
+    margin-bottom: 10px;
 }
 
 /* Content Boxes */
@@ -41,14 +56,15 @@ h1 {
     padding: 25px;
     width: 60%;
     border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
     text-align: left;
     line-height: 1.6;
-    transition: transform 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .box:hover {
-    transform: scale(1.02);
+    transform: scale(1.03);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.35);
 }
 
 /* Links inside boxes */
@@ -62,7 +78,35 @@ h1 {
     text-decoration: underline;
 }
 
-/* Contact header */
+/* Icons inside boxes */
+.box i {
+    margin-right: 10px;
+    color: #2a5298;
+}
+
+/* Section headers */
 h2 {
     margin-top: 0;
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color: rgba(0,0,0,0.6);
+    font-size: 14px;
+}
+
+/* Small screen support (mobile) */
+@media (max-width: 768px) {
+    .box {
+        width: 85%;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
 }
